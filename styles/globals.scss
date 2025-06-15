@@ -1,10 +1,13 @@
 // Variables
 $primary-color: #285231;
-$secondary-color: #6b7280;
+// $secondary-color: #6b7280;
+$secondary-color: #fafafa;
 $background-color: #ffffff;
 $text-color: #1a1a1a;
 $error-color: #dc2626;
 $success-color: #059669;
+
+@import "./_todo.scss";
 
 // Reset and base styles
 * {
@@ -122,12 +125,15 @@ a {
 
 // Header
 .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
   padding: 12px 0;
-  margin-bottom: 12px;
   text-align: center;
   background-color: $primary-color;
   .h-icon {
@@ -137,16 +143,5 @@ a {
   .h-text {
     font-size: 20px;
     font-weight: 500;
-  }
-}
-
-// Main
-.main-wrapper {
-  display: flex;
-  justify-content: center;
-  .main {
-    min-width: 500px;
-    max-width: 500px;
-    // background-color: red;
   }
 }
